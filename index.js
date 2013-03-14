@@ -1,3 +1,3 @@
 module.exports = {
-    Publish: require('./lib/publish')
+    Publish: require('./tasks/publish')
 };

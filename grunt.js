@@ -28,7 +28,7 @@ module.exports = function(grunt) {
   });
 
   // Add to your imports.
-  grunt.loadTasks( './lib' );
+  grunt.loadTasks( './tasks' );
 
   // Default task(s).
   grunt.registerTask('default', ['mixdown-publish']);

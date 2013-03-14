@@ -19,13 +19,15 @@ var validateOutput = function(filename, t, callback) {
         var gold = files[0],
             out = files[1];
 
+        t.ok(gold, filename + ": Gold should not be null");
+        t.ok(out, filename + ": Out should not be null");
+
         t.equal(gold, out, filename + ": output should match gold.");
         callback();
     });
 };
 
 test("Test site export", function(t) {
-
 
     childProcess.exec(
         'grunt',
@@ -40,7 +42,7 @@ test("Test site export", function(t) {
             });
 
             tests.push(function(cb) {
-                validateOutput('js/main.css', t, cb);
+                validateOutput('js/main.js', t, cb);
             });
 
             tests.push(function(cb) {

@@ -44,10 +44,8 @@ Router.prototype.attach = function (options) {
         });
 
         router.get('/css/style.css', function(req, res) { 
-            fs.readFile(__dirname + '/style.css', { encoding: 'utf8' }, function(err, css) {
-                res.writeHead(200, { "Content-Type": "text/css" });
-                res.end(css);
-            });
+            res.writeHead(200, { "Content-Type": "text/css" });
+            fs.createReadStream(__dirname + '/style.css').pipe(res);
         });
 
         return router;
