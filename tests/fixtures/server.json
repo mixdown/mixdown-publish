@@ -1,0 +1,39 @@
+{
+    "app": {
+        "plugins":{
+            "router": {
+                "module": "/tests/fixtures/router.js"
+            }
+        }
+    },
+    "sites": [
+        {
+            "id": "demo",
+            "hostmap": [
+                "localhost"
+            ],
+            "plugins": {}
+        }
+    ],
+    "server": {
+        "listen": {
+            "port": 8081,
+            "type": "tcp"
+        },
+        "logger": {
+            "defaults": {
+                "handleExceptions": false,
+                "json": false,
+                "timestamp": true,
+                "colorize": true,
+                "prettyPrint": true
+            },
+            "transports": [{
+                "transport": "Console",
+                "options": {
+                    "level": "debug"
+                }
+            }]
+        }
+    }
+}

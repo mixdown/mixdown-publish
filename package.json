@@ -1,0 +1,35 @@
+{
+  "name": "mixdown-publish",
+  "version": "0.0.0",
+  "description": "Grunt task to export a mixdown project to PhoneGap, static site, or other.",
+  "main": "index.js",
+  "scripts": {
+    "test": "tap tests/publish.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mixdown/mixdown-publish.git"
+  },
+  "keywords": [
+    "mixdown",
+    "publish",
+    "phonegap",
+    "grunt"
+  ],
+    "dependencies": {
+    "lodash": "1.0.1",
+    "async": "0.2.6",
+    "mixdown-server": "0.3.x",
+    "node-pipeline": "*",
+    "wrench": "*",
+    "hammock": "*",
+    "grunt": "0.3.17"
+  },
+  "devDependencies": {
+    "tap": "*",
+    "pipeline-router": "*"
+  },
+  "author": "Tommy at Vast",
+  "license": "BSD",
+  "readmeFilename": "README.md"
+}
